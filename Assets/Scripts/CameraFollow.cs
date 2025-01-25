@@ -10,37 +10,32 @@ public class CameraFollow : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log(transform.position.y - boundary);
     }
 
     // Update is called once per frame
     void Update()
     {
         Vector3 p = transform.position;
-        if(player.gameObject.transform.position.y<=transform.position.y-boundary && transform.position.y>=-11.75)
+        if(player.gameObject.transform.position.y<=transform.position.y-boundary && transform.position.y>=-8.5)
         {
-            Debug.Log("Entered State");
             p.y -= scrollspeed*Time.deltaTime;
             transform.position = p;
         }
 
         if (player.gameObject.transform.position.y >= transform.position.y + boundary && transform.position.y <= 0)
         {
-            Debug.Log("Entered State");
             p.y += scrollspeed * Time.deltaTime;
             transform.position = p;
         }
 
-        if (player.gameObject.transform.position.x <= transform.position.x - boundary && transform.position.x >= -18)
+        if (player.gameObject.transform.position.x <= transform.position.x - boundary && transform.position.x >= -14)
         {
-            Debug.Log("Entered State");
             p.x -= scrollspeed * Time.deltaTime;
             transform.position = p;
         }
 
-        if (player.gameObject.transform.position.x >= transform.position.x + boundary && transform.position.x <= 18)
+        if (player.gameObject.transform.position.x >= transform.position.x + boundary && transform.position.x <= 14)
         {
-            Debug.Log("Entered State");
             p.x += scrollspeed * Time.deltaTime;
             transform.position = p;
         }

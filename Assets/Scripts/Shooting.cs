@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Shooting : MonoBehaviour
 {
+    [SerializeField] float oLoss;
+    public OxigenMeter o2;
     public Camera mainCamera;
     private Vector3 mousePos;
     public GameObject bullet;
@@ -14,6 +16,7 @@ public class Shooting : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        o2 = gameObject.GetComponentInParent<OxigenMeter>();
         mainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
     }
 
@@ -42,6 +45,7 @@ public class Shooting : MonoBehaviour
         {
             canFire = false;
             Instantiate(bullet, bulletTransform.position, Quaternion.identity);
+            o2.oxigenCurr -= oLoss;
         }
     }
 }

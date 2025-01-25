@@ -6,7 +6,7 @@ using TMPro;
 public class OxigenMeter : MonoBehaviour
 {
     public TextMeshProUGUI o2Text;
-    [SerializeField] float oxigenFull;
+    [SerializeField] public float oxigenFull;
     public float oxigenCurr;
     void Start()
     {

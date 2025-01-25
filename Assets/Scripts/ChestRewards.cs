@@ -1,0 +1,39 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class ChestRewards : MonoBehaviour
+{
+    public GameObject player;
+    public PlayerController controller;
+    public OxigenMeter o2;
+    // Start is called before the first frame update
+    void Start()
+    {
+        controller = player.GetComponent<PlayerController>();
+        o2 = player.GetComponent<OxigenMeter>();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+    public void rewardTable(int drop)
+    {
+        switch(drop)
+        {
+            case 1:
+                controller.speed *=1.5f;
+                break;
+            case 2:
+                o2.oxigenFull *= 1.5f;
+                break;
+            case 3:
+                break;
+            default:
+                break;
+        }
+    }
+}

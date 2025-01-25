@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
     public static PlayerController instance;
     private float horizontal;
     private float vertical;
-    [SerializeField] private float speed = 3f;
+    [SerializeField] public float speed = 3f;
     public Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()
