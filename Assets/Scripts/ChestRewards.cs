@@ -11,8 +11,7 @@ public class ChestRewards : MonoBehaviour
     void Start()
     {
         
-        controller = player.GetComponent<PlayerController>();
-        o2 = player.GetComponent<OxigenMeter>();
+        
     }
 
     // Update is called once per frame
@@ -40,5 +39,6 @@ public class ChestRewards : MonoBehaviour
                 Debug.Log("Error");
                 break;
         }
+        Destroy(gameObject);
     }
 }
