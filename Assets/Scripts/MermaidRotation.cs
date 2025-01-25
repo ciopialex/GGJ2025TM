@@ -14,7 +14,7 @@ public class MermaidRotation : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         mousePos = mainCamera.ScreenToWorldPoint(Input.mousePosition);
         Vector3 rotation = transform.position - mousePos;

@@ -9,6 +9,7 @@ public class ChestController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         damage = gameObject.GetComponent<DamageSink>();
         damage.hp = hp;
     }
@@ -16,14 +17,23 @@ public class ChestController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(damage.destroyed)
+        {
+            OnDestroy();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.GetComponent<BulletBehavior>())
+        if (collision.gameObject.GetComponent<BulletBehavior>())
         {
-            Debug.Log("hitByBubble");
+            BulletBehavior bubble = collision.gameObject.GetComponent<BulletBehavior>();
+            damage.TakeDamage(bubble.damage);
         }
+    }
+
+    public void OnDestroy()
+    {
+        Debug.Log("Chest is Destroyed");
     }
 }

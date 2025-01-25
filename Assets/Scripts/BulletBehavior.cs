@@ -10,6 +10,7 @@ public class BulletBehavior : MonoBehaviour
     private Rigidbody2D rb;
     public float force;
     [SerializeField] float aliveTime;
+    [SerializeField] public float damage;
     private IEnumerator countdown;
     void Start()
     {

@@ -6,6 +6,7 @@ public class DamageSink : MonoBehaviour
 {
     public bool destroyed;
     public float hp;
+
     // Start is called before the first frame update
     void Start()
     {
