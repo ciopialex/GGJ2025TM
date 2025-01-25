@@ -16,15 +16,14 @@ public class DamageSink : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(hp<=0)
+        {
+            destroyed = true;
+        }
     }
 
     public void TakeDamage(float damage)
     {
         hp -= damage;
-        if (hp <= 0)
-        {
-            destroyed = true;
-        }
     }
 }

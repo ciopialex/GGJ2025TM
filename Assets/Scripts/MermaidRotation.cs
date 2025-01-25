@@ -20,7 +20,6 @@ public class MermaidRotation : MonoBehaviour
         Vector3 rotation = transform.position - mousePos;
 
         float rot = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0, 0, (rot+90)*0.25f);
-        Debug.Log(transform.rotation);
+        transform.rotation = Quaternion.Euler(0, 0, rot + 90);
     }
 }
