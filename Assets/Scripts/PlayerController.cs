@@ -21,7 +21,6 @@ public class PlayerController : MonoBehaviour
     {
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
-        
     }
 
     private void FixedUpdate()
@@ -29,10 +28,10 @@ public class PlayerController : MonoBehaviour
         rb.velocity = new Vector2(horizontal * speed, vertical * speed);
     }
 
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        rb.velocity = new Vector2(0,0);
-    }
+    //private void OnCollisionExit2D(Collision2D collision)
+    //{
+    //    rb.velocity = new Vector2(0,0);
+    //}
 
 
 }

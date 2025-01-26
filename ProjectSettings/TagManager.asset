@@ -48,8 +48,11 @@ TagManager:
   - name: Waves1
     uniqueID: 2343205045
     locked: 0
-  - name: Ship
-    uniqueID: 64525023
+  - name: Waves2
+    uniqueID: 3036609253
+    locked: 0
+  - name: ShipTop
+    uniqueID: 1508731967
     locked: 0
   - name: ShipPirate
     uniqueID: 972525917
@@ -57,8 +60,8 @@ TagManager:
   - name: PirateHand
     uniqueID: 2777801625
     locked: 0
-  - name: Waves2
-    uniqueID: 3036609253
+  - name: ShipBottom
+    uniqueID: 64525023
     locked: 0
   - name: ForeGround
     uniqueID: 690427863
