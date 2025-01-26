@@ -51,6 +51,12 @@ TagManager:
   - name: Ship
     uniqueID: 64525023
     locked: 0
+  - name: ShipPirate
+    uniqueID: 972525917
+    locked: 0
+  - name: PirateHand
+    uniqueID: 2777801625
+    locked: 0
   - name: Waves2
     uniqueID: 3036609253
     locked: 0
